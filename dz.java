@@ -2,7 +2,8 @@ import java.util.*;
 /**
  * Класс, содержащий необходимый для запроса поиска методы.
  */
-class Filmname {
+class Filmname 
+{
     private String name;
 
     public String getname() 
