@@ -1,11 +1,22 @@
 import java.util.*;
-class filn {
+/**
+ * Класс, содержащий необходимый для запроса поиска методы.
+ */
+class Filmname {
     private String name;
-    public String getnm() {
+
+    /**
+     * 
+     * @param name Переменная параметра поиска. Только для чтения.
+     */
+
+    public String getnm() 
+    {
         return name;
     }
 
-    public filn(String word) {
+    public Filmname(String word) 
+    {
         this.name = word;
         this.films(name);
     }
@@ -17,9 +28,11 @@ class filn {
         films.add("Dunkirk, 2017 год, Кристофер Нолан, военная драма");
         films.add("The Elephant Man, 1980 год, Дэвид Линч, драма");
         films.add("Mulholland Drive, 2001 год, Дэвид Линч, триллер");
-        System.out.println("Результаты поиска: ");
-        for (String i : films) {
-            if(i.contains(word)) {
+        System.out.println("Результаты поиска:\n");
+        for (String i : films) 
+        {
+            if(i.contains(word))
+            {
                 System.out.println(i);
             }
         }
@@ -27,14 +40,17 @@ class filn {
     }
 }
 /**
- * dz
+ * Основной класс. Здесь идёт ввод пользователем запроса на поиск.
  */
-public class dz {
-    public static void main(String[] args) {
+public class DZ
+{
+    public static void main(String[] args) 
+    {
         Scanner work = new Scanner(System.in);
-        System.out.printf("Введите желаемое название фильма: ");
-        String na = work.nextLine();
-        filn me = new filn(na);
+        System.out.println("Введите желаемый параметр поиска (название\\год выпуска\\режиссёр): ");
+        String myName = work.nextLine();
+        Filmname me = new Filmname(myName);
         work.close();
+        System.out.println();
     }
 }
