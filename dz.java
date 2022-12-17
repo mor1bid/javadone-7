@@ -5,12 +5,7 @@ import java.util.*;
 class Filmname {
     private String name;
 
-    /**
-     * 
-     * @param name Переменная параметра поиска. Только для чтения.
-     */
-
-    public String getnm() 
+    public String getname() 
     {
         return name;
     }
